@@ -12,6 +12,7 @@ export class ScannerService {
     if (!decoded) {
       return
     }
+    console.log(isbn)
 
     io.to(decoded.email).emit('isbn-scanned', isbn)
   }

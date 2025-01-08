@@ -8,7 +8,7 @@ import { verifyToken } from 'src/helpers/verify-token'
 export class AuthSocketService {
   constructor() {}
 
-  public async authenticate(socket: Socket) {
+  public authenticate(socket: Socket) {
     return (token: string) => {
       const decoded = verifyToken(token)
       if (!decoded) {

@@ -15,7 +15,7 @@ export class SocketController {
 
     socket.on('message', (message: string) => console.log('message: ', message))
 
-    socket.on('authenticate', () => this.authSocketService.authenticate(socket))
+    socket.on('authenticate', this.authSocketService.authenticate(socket))
 
     socket.on('isbn-scanned', this.scannerService.isbnScanned)
   }
